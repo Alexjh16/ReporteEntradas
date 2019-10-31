@@ -8,6 +8,3 @@
     <link rel="stylesheet" type="text/css" href="assets/lib/boostrap-4/boostrap-4.css"/>
     <title><?php print($title); ?></title>
 </head>
-<span>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ab, odio at unde soluta nesciunt aut, voluptate repellendus laborum cupiditate nisi nulla exercitationem dicta ad aspernatur officia pariatur facere incidunt?
-</span>

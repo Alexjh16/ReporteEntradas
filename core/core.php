@@ -1,5 +1,6 @@
 <?php
     require_once("models/database.php");
+    require_once("models/Login.php");
     require_once("models/Usuario.php");
     require_once("models/Cargo.php");
     require_once("models/Reporte.php");
