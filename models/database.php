@@ -2,7 +2,7 @@
 class database{
     public function Connect(){
         try{
-            $PDO = new PDO("mysql:hostname=localhost;dbname=reporteentradas;charset=utf8","root","");
+            $PDO = new PDO("mysql:hostname=localhost;dbname=reporteEntradas;charset=utf8","root","");
             $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $PDO;
         }

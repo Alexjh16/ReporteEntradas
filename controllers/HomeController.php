@@ -1,8 +1,8 @@
 <?php
 class HomeController{
-    public function index(){
-        require_once("views/home/index.php");
+    public function login(){
+        $title = "Home | Login";
+        require_once("views/home/login.php");
     }
-
 }
 ?>

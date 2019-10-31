@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+
+@font-face{
+    src : url("../fonts/Raleway-Regular.ttf") format("Opentype");
+    font-style: bolder;
+    font-weight: 900;
+    font-family: "Raleway-Regular";
+}
+#login{
+    position : absolute;
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-size: cover;    
+    width: 100vw;
+    height: 100vh;
+}
+#login .login-blur-container{
+    position: relative;
+    margin: 5% auto;
+    background-color: rgba(35, 64, 66, 0.37);
+    width: 40%;
+    height: 75%;
+    border-radius: 5px;
+}
+#login .login-blur-container .login-container{
+    position: relative;
+    top: 10%;
+    left: 8%;
+    width: 100%;
+    height: auto;
+}
+
+#login .login-container form{
+    position: inherit;
+    padding: 25px; 
+}
+
+#login .login-container form .image-container{
+    display: inline;
+}
+
+#login .login-container form h2{
+    position: relative;
+    left: 0%;
+}
+
+#login .login-container form label{
+    color: rgb(58, 43, 43);
+    font-weight: 600;
+    margin-top: 35px;
+    font-size: 1.28em;
+    font-family: "Raleway-Regular";
+}
+
+#login .login-container form input{    
+    display: block;
+    width: 80%;
+    color: white;
+    border-bottom: 1px solid rgb(69, 70, 68);
+    height: 35px;
+    padding: 15px;
+    font-family: "Raleway-Regular";
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    transition: all .5s;
+}
+#login .login-container form .remember{    
+    font-size: 0.9em;
+}
+
+#login .login-container form input[type="checkbox"]{    
+    position: relative;
+    top: 15px;
+    width: 25px;
+    height: 20px;
+    display: inline;
+}
+
+#login .login-container form input:focus{
+    outline: none;
+    color: rgb(123, 197, 54);
+    border-bottom: 1px solid rgb(144, 192, 100);
+    transition: all .5s;
+}
+
+#login .login-container form button{
+    margin-top: 30px;
+    padding: 8px;
+    width: 40%;   
+    color: rgba(255, 255, 255, 0.589);
+    background-color: transparent;
+    border: 1px solid rgba(128, 85, 85, 0.822);
+    font-family: sans-serif;
+    transition: all .5s;
+    border-radius: 3px;
+}
+
+#login .login-container form button:hover{
+    background-color: rgba(128, 85, 85, 0.322);
+    color: rgba(59, 40, 40, 0.979);
+    transition: all .5s;    
+}
+
+#login .login-container form span{
+    color: rgba(189, 14, 5);
+    font-family: sans-serif;
+    font-size: .9em;
+    margin-left: 10px;
+    display: none;
+}
+#login .login-container form p{
+    color: rgb(144, 192, 100);
+    padding-top: 25px;
+}
+
+#login .login-container form a{
+    color: rgb(218, 96, 15);
+}
+
+#login .login-container form a:hover{
+    color: rgb(255, 110, 14);
+    text-decoration: none;
+}
+
