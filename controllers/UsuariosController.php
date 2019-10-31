@@ -1,5 +1,5 @@
 <?php 
-class UsuariosController{
+class UsuariosController extends Login{
     public function administrador(){
         require_once("views/administrador/index.php");
     }

@@ -30,13 +30,13 @@ class LoginController extends Login{
             if(@$usuario->fk_rol == 1){
                 global $title;
                 $title = "Administrador | Home";
-                $_SESSION['user'] = $usuario;
+                $_SESSION['user_administrador'] = $usuario;
                 require_once("views/administrador/index.php");
             }            
             else{
                 global $title;
                 $title = "Empleado | Home";
-                $_SESSION['user'] = $usuario;
+                $_SESSION['user_empleado'] = $usuario;
                 require_once("views/empleado/index.php");
             }            
         }
