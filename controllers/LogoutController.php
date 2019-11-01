@@ -1,6 +1,6 @@
 <?php 
 class LogoutController{
-    public function __construct(){
+    public function exit(){
         session_destroy();
         header("location:?class=Home&method=login");
     }

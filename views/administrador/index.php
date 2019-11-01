@@ -8,15 +8,25 @@
             
             <nav>
                 <ul>
-                    <li><a>Registrar</a></li>
-                    <li><a>Ver Reportes</a></li>
-                    <li><a>About</a></li>
-                    <li><a>logout</a></li>
+                    <li><a href="?class=Administrador&method=Registro">Registrar</a></li>
+                    <li><a href="?class=Administrador&method=Reportes">Ver Reportes</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="?class=Logout&method=exit">logout</a></li>
                 </ul>
             </nav>        
         </header>
         <section>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae distinctio accusantium eligendi porro ad sit eius vitae incidunt, excepturi, illum magni voluptatem eos facere voluptate optio, et amet natus dolores.
+            <div class="content">                
+            
+            </div>
+            <div class="content-text">
+                <div class="content-elements">
+                    <h4>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptatum corporis maxime, similique tempore maiores ullam neque adipisci <a href="#">tenetur</a> sed excepturi aperiam debitis? Veniam natus modi labore quae, excepturi beatae.
+                    </h4>
+                    <button>Debian Training</button>
+                </div>                                
+            </div>
         </section>
     </div>    
     <!-- <a href="?class=Logout">Salir</a> -->

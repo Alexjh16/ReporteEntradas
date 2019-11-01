@@ -1,0 +1,4 @@
+<html>
+
+formulario registro;
+</html>
