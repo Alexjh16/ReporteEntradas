@@ -9,9 +9,10 @@ Requerimientos.
 El sistema de información debe contar con dos roles (Administrador, Empleado)
 dichos roles podrán iniciar sesion en el sistema.
 
-Tareas del administrador.
+Tareas del administrador.	
 1-) el administrador podrá iniciar sesion correcta
 2-) el administrador podrá registrar un nuevo empleado solo si esta logeado. datos del empleado(Documento,Nombres,Apellidos,Correo,Contraseña,Cargo,Tipo documento).
+
 3-) el administrador puede consultar el reporte de entradas y salidas de un empleado por documento.
 4-) el administrador puede ver los empleados que asistieron en determinada fecha.
 5-) el administrador ve la cantidad de horas trabajadas por cada empleado teniendo en cuenta entrada y salida registrada.

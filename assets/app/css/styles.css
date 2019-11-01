@@ -200,6 +200,17 @@
     filter: blur(2.4px);
 }
 
+#administrador section .content-registrar{
+    background-color: rgba(110, 58, 58, 0.787);
+    width: 50%;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    border-radius: 3px;
+    left: 25%;
+    filter: blur(5px);
+}
+
 #administrador section .content-text{
     background-color: transparent;
     width: 50%;
@@ -235,3 +246,128 @@
 #administrador section .content-text .content-elements button:focus{
     outline: none;
 }
+
+#administrador header nav ul li .active-button{
+    background-color: rgba(187, 190, 14, 0.116);
+}
+
+#administrador section .content-text .content-elements .title-registro{
+    font-family: "Raleway-Regular";
+    padding: 5px
+}
+
+#administrador section .content-elements-1{
+    float: left;
+    position: relative;
+    left: 50px;
+    text-align: left;
+}
+
+#administrador section .content-elements-1 label{
+    display: block;
+    font-family: "Raleway-Regular";
+    margin-top: 10px;
+}
+
+#administrador section .content-elements-1 select{
+    width: 205px;
+    height: 30px;
+    background-color: transparent;
+    font-family: "Raleway-Regular";
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 2px;
+    transition: all .5s;
+    color: rgba(64, 194, 12, 0.486);
+    cursor: pointer;
+}
+#administrador section .content-elements-1 select:focus{
+    outline: none;    
+    color: black;
+    border-bottom: 1px solid rgba(64, 194, 12, 0.486);
+    transition: all .5s;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{ 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+#administrador section .content-elements-1 input{
+    width: 205px;
+    height: 30px;
+    background-color: transparent;
+    font-family: "Raleway-Regular";
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 2px;
+    transition: all .5s;
+}
+
+#administrador section .content-elements-1 input:focus{
+    outline: none;
+    color: rgba(64, 194, 12, 0.486);
+    border-bottom: 1px solid rgba(64, 194, 12, 0.486);
+    transition: all .5s;
+}
+
+#administrador section .content-elements-2{
+    position: relative;
+    text-align: left;
+    right: 50px;
+    float: right;
+}
+
+#administrador section .content-elements-2 label{
+    display: block;
+    font-family: "Raleway-Regular";
+    margin-top: 10px;
+}
+
+#administrador section .content-elements-2 input{
+    width: 205px;
+    height: 30px;
+    background-color: transparent;
+    font-family: "Raleway-Regular";
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 2px;
+    transition: all .5s;
+}
+
+#administrador section .content-elements-2 input:focus{
+    outline: none;
+    color: rgba(64, 194, 12, 0.486);
+    border-bottom: 1px solid rgba(64, 194, 12, 0.486);
+    transition: all .5s;
+}
+
+#administrador section input[type="submit"]{
+    color: white;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 2px;
+    font-family: "Raleway-Regular";
+    margin-top: 40%;
+    width: 100px;
+    transition: all .5s;
+}
+
+#administrador section input[type="submit"]:hover{
+    background-color: rgba(115, 194, 25, 0.328);
+    border: 1px solid wheat;
+    color: black;
+    transition: all .5s;
+}
+
+#administrador section p{
+    font-family: "Raleway-Regular";
+    padding: 15px;
+    font-weight: bold;
+    font-style: bolder;
+}
+
