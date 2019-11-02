@@ -26,10 +26,14 @@
                     </h4>
                     <form method="post" action="?class=Administrador&method=ViewReport">
                         <div class="content-elements-1">
-                            <label for="numero_documento">Numero Documento</label>
-                            <input type="number" name="numero_documento" id="numero_documento" required="true">
+                            <label for="numero_documento">Documento/Email</label>
+                            <input type="text" name="numero_documento" id="numero_documento" required="true">
                         </div>                        
                         <button type="submit">Consultar</button>
+                        <br>
+                        <br>
+                        <br>
+                        <span style="color: rgba(215, 15, 54); font-family: 'Raleway-regular'"> &nbsp* Usuario no encontrado *</span>
                     </form>
                 </div>                                
             </div>

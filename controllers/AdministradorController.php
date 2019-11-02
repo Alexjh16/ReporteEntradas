@@ -19,6 +19,15 @@ class AdministradorController extends Login{
     }
 
     public function ViewReport(){
+        $title = "Reportes | Empleados";
+        $numero_documento = $_POST['numero_documento'];
+        $user_exist = $this->Usuarios->validateUser($numero_documento);
+        if($user_exist == true){
+            print("si");
+        }
+        else{
+            header("location:?class=Administrador&method=Reportes&ErrorUser=true");
+        }
         require_once("views/administrador/verreporte.php");
     }
 }
