@@ -27,7 +27,7 @@ class LoginController extends Login{
             
         if (((@$usuario->numero_documento == $identificacion_usuario) || (@$usuario->correo_usuario == $identificacion_usuario)) && (@$usuario->clave_usuario == $clave_usuario)){
 
-            if(@$usuario->fk_rol == 1){
+            if(@$usuario->fk_rol == 2){
                 global $title;
                 $title = "Administrador | Home";
                 $_SESSION['user_administrador'] = $usuario;
