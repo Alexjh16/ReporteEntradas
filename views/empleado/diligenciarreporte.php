@@ -24,14 +24,30 @@
                         Recuerde llenar ambos espacios con su Numero de documento, tener en cuenta primero la *Hora de entrada.
                     </h4>
                     <form method="post" action="?class=Empleado&method=EnviarReporte">
+                    <?php if(@$is_report_true[0]->hora_entrada == ''): ?>
                         <label for="dato_entrada">Marcar hora de entrada</label>
-                            <input type="number" id="dato_entrada" name="dato_entrada" placeholder="Numero documento">
-                        <label for="dato_salida">Marcar hora de salida</label>
-                            <input type="number" id="dato_salida" name="dato_salida" placeholder="Numero documento">
+                        <input type="number" id="dato_entrada" name="dato_entrada" placeholder="Numero documento">
+                    <?php endif; ?>
+
+                    <?php if(@$is_report_true[0]->hora_salida == ''): ?>
+                            <label for="dato_salida">Marcar hora de salida</label>
+                            <input type="number" id="dato_salida" name="dato_salida" placeholder="Numero documento">                       
+                    <?php endif; ?>
                         <input type="hidden" name="numero_documento" value="<?php print($_SESSION['user_empleado']->numero_documento); ?>">
+                        <input type="hidden" name="fk_documento_empleado" value="<?php print($_SESSION['user_empleado']->id_usuario); ?>">
+                    <?php if(@$is_report_true[0]->hora_salida == '' || @$is_report_true[0]->hora_entrada == ''): ?>
                         <button type="submit">Hacer Registro</button> 
+                    <?php endif; ?>
                         <?php if(isset($_REQUEST['WrongDocument'])): ?>
                             <span> *Error* ha digitado mal su numero de identificación</span>
+                        <?php endif; ?>
+
+                        <?php if(@$is_report_true[0]->hora_entrada != ''): ?>
+                            <p> *Registro de entrada completo*</p>
+                        <?php endif; ?>
+
+                        <?php if(@$is_report_true[0]->hora_salida != '' && @$is_report_true[0]->hora_entrada != ''): ?>
+                            <p> *Ya se realizaron registros el dia de hoy*</p>
                         <?php endif; ?>
                     </form>                    
                 </div>                                

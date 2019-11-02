@@ -31,6 +31,41 @@ class Usuario extends database{
         }
     }
 
+    public function ValidarReporte($fk_documento_usuario, $fecha_reporte){
+        try{
+            $stm = parent::Connect()->prepare("SELECT * FROM reportes WHERE fk_documento_usuario = $fk_documento_usuario AND fecha_reporte = '$fecha_reporte'");
+            $stm->execute();
+            $data = $stm->fetchAll(PDO::FETCH_OBJ);
+            return $data;            
+        }
+        catch(Exception $error){
+            die("Error found in file models/Usuario.php:: ".$error->getMessage());
+        }
+    }
+
+    public function InsertarReporteEntrada($fk_documento_usuario, $fecha_reporte, $dato_entrada){
+        try{
+            $stm = parent::Connect()->prepare("INSERT INTO reportes (fk_documento_usuario, fecha_reporte, hora_entrada) VALUES(?, ?, ?)");
+            $stm->bindParam(1, $fk_documento_usuario, PDO::PARAM_INT);
+            $stm->bindParam(2, $fecha_reporte, PDO::PARAM_STR);
+            $stm->bindParam(3, $dato_entrada, PDO::PARAM_STR);
+            $stm->execute();
+        }
+        catch(Exception $error){
+            die("Error found in file models/Usuarios.php::".$error->getMessage());
+        }
+    }
+
+    public function InsertarReporteSalida($dato_salida, $fecha_reporte, $fk_documento_usuario){
+        try{
+            $stm = parent::Connect()->prepare("UPDATE reportes set hora_salida = '$dato_salida' WHERE fecha_reporte = '$fecha_reporte' AND fk_documento_usuario = $fk_documento_usuario");
+            $stm->execute();
+        }
+        catch(Exception $error){
+            die("Error found in file models/Usuarios.php::".$error->getMessage());
+        }
+    }
+
     public function validateUser($identificacion_usuario){
         try{
             $stm = parent::Connect()->prepare("SELECT * FROM usuarios WHERE correo_usuario = '$identificacion_usuario' OR numero_documento = '$identificacion_usuario'");

@@ -17,5 +17,9 @@ class AdministradorController extends Login{
         $title = "Reporte | Empleado";
         require_once("views/administrador/reportes.php");
     }
+
+    public function ViewReport(){
+        require_once("views/administrador/verreporte.php");
+    }
 }
 ?>

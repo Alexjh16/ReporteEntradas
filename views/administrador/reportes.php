@@ -15,16 +15,22 @@
                 </ul>
             </nav>        
         </header>
-        <section>
+        <section id="ReporteEmpleado">
             <div class="content">                
             
             </div>
             <div class="content-text">
                 <div class="content-elements">
                     <h4>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptatum corporis maxime, similique tempore maiores ullam neque adipisci <a href="#">tenetur</a> sed excepturi aperiam debitis? Veniam natus modi labore quae, excepturi beatae.
+                        Para consultar los reportes de los empleados, por favor digite el numero de documento.
                     </h4>
-                    <button>Debian Training</button>
+                    <form method="post" action="?class=Administrador&method=ViewReport">
+                        <div class="content-elements-1">
+                            <label for="numero_documento">Numero Documento</label>
+                            <input type="number" name="numero_documento" id="numero_documento" required="true">
+                        </div>                        
+                        <button type="submit">Consultar</button>
+                    </form>
                 </div>                                
             </div>
         </section>

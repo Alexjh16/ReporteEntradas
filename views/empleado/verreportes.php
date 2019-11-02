@@ -15,19 +15,45 @@
                 </ul>
             </nav>        
         </header>
-        <section>
-            <div class="content">                
-            
-            </div>
-            <div class="content-text">
-                <div class="content-elements">
-                    <h4>
-                        <label for="dato_entrada">Marcar Hora de Entrada</label>
-                        <label for="dato_salida">Marcar Hora de Salida</label>
-                    </h4>
-                    <button>Debian Training</button>
-                </div>                                
-            </div>
+        <section id="ReporteEmpleado">
+            <table>
+                <tr>
+                    <th>Fecha Reporte</th>
+                    <th>Hora Entrada</th>
+                    <th>Hora Salida</th>
+                </tr>
+                <?php foreach($ReportesUsuarios as $ReportesUsuario): ?>
+                    <tr>
+                        <td>
+                            <input type="hidden" value="<?php
+                                $fecha_reporte =  $ReportesUsuario->fecha_reporte; 
+                                $fecha_reporte = explode("-",$fecha_reporte);
+                                $month = $fecha_reporte[1];     
+                                $month = CalculateMonth($month);
+                            ?>"">
+                            <?php
+                            print($month." ".$fecha_reporte[2]." del ".$fecha_reporte[0]);
+                            ?>
+                        </td>
+                        <td>
+                            <?php 
+                                $hora_entrada = $ReportesUsuario->hora_entrada; 
+                                $hora_entrada = explode(" ", $hora_entrada);
+                                $hora_entrada = $hora_entrada[1];
+                                print($hora_entrada);                                
+                            ?>
+                        </td>
+                        <td>   
+                            <?php 
+                                $hora_salida = $ReportesUsuario->hora_salida; 
+                                $hora_salida = explode(" ", $hora_salida);
+                                $hora_salida = $hora_salida[1];
+                                print($hora_salida);                                
+                            ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
         </section>
     </div>    
     <!-- <a href="?class=Logout">Salir</a> -->
