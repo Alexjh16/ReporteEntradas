@@ -3,7 +3,7 @@
 <?php parent::CheckSessionEmpleado(); ?>
     <div id="empleado">
         <header>
-            <img src="assets/app/img/icon-login.png">
+            <img src="assets/app/img/admin-icon.png">
             <span>Bienvenido <?php print($_SESSION['user_empleado']->nombres_usuario); ?></span>
             
             <nav>
@@ -28,7 +28,7 @@
                             <input type="hidden" value="<?php
                                 $fecha_reporte =  $ReportesUsuario->fecha_reporte; 
                                 $fecha_reporte = explode("-",$fecha_reporte);
-                                $month = $fecha_reporte[1];     
+                                $month = @$fecha_reporte[1];     
                                 $month = CalculateMonth($month);
                             ?>"">
                             <?php
@@ -39,16 +39,26 @@
                             <?php 
                                 $hora_entrada = $ReportesUsuario->hora_entrada; 
                                 $hora_entrada = explode(" ", $hora_entrada);
-                                $hora_entrada = $hora_entrada[1];
-                                print($hora_entrada);                                
+                                $hora_entrada = @$hora_entrada[1];
+                                if($hora_entrada != ''){
+                                    print($hora_entrada);
+                                }
+                                else{
+                                    print("Aun no hay registro");
+                                }                                                               
                             ?>
                         </td>
                         <td>   
                             <?php 
                                 $hora_salida = $ReportesUsuario->hora_salida; 
-                                $hora_salida = explode(" ", $hora_salida);
-                                $hora_salida = $hora_salida[1];
-                                print($hora_salida);                                
+                                $hora_salida = explode(" ", @$hora_salida);
+                                $hora_salida = @$hora_salida[1];
+                                if($hora_salida != ''){
+                                    print($hora_salida);
+                                }
+                                else{
+                                    print("Aun no hay registro");
+                                }
                             ?>
                         </td>
                     </tr>

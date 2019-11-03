@@ -3,17 +3,17 @@
 <?php parent::CheckSessionAdmin(); ?>
     <div id="empleado">
         <header>
-            <img src="assets/app/img/icon-login.png">
+        <img src="assets/app/img/admin-icon.png">
             <span>Bienvenido <?php print($_SESSION['user_administrador']->nombres_usuario); ?></span>
             
             <nav>
                 <ul>
-                    <li><a href="?class=Empleado&method=DiligenciarReporte">Ingreso/Salida</a></li>
-                    <li><a class="active-button" href="#">Ver mis reportes</a></li>
+                    <li><a href="?class=Administrador&method=Registro">Registrar</a></li>
+                    <li><a href="?class=Administrador&method=Reportes">Ver Reportes</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="?class=Logout&method=exit">logout</a></li>
                 </ul>
-            </nav>        
+            </nav>       
         </header>
         <section id="ReporteEmpleado">
             <table>
@@ -21,6 +21,7 @@
                     <th>Fecha Reporte</th>
                     <th>Hora Entrada</th>
                     <th>Hora Salida</th>
+                    <th>Total Horas</th>
                 </tr>
                 <?php foreach($ReportesUsuarios as $ReportesUsuario): ?>
                     <tr>
@@ -39,17 +40,30 @@
                             <?php 
                                 $hora_entrada = $ReportesUsuario->hora_entrada; 
                                 $hora_entrada = explode(" ", $hora_entrada);
-                                $hora_entrada = $hora_entrada[1];
-                                print($hora_entrada);                                
+                                $hora_entrada = @$hora_entrada[1];
+                                if($hora_entrada != ''){
+                                    print($hora_entrada);
+                                }
+                                else{
+                                    print("Aun no hay registro");
+                                }                                                               
                             ?>
                         </td>
                         <td>   
                             <?php 
                                 $hora_salida = $ReportesUsuario->hora_salida; 
-                                $hora_salida = explode(" ", $hora_salida);
-                                $hora_salida = $hora_salida[1];
-                                print($hora_salida);                                
+                                $hora_salida = explode(" ", @$hora_salida);
+                                $hora_salida = @$hora_salida[1];
+                                if($hora_salida != ''){
+                                    print($hora_salida);
+                                }
+                                else{
+                                    print("Aun no hay registro");
+                                }
                             ?>
+                        </td>
+                        <td>
+                            <?php CalculateHours($hora_salida, $hora_entrada); ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

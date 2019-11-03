@@ -97,8 +97,7 @@ class EmpleadoController extends Login{
                         $month  = "Diciembre";                    
                         print("Diciembre");
                         return $month;
-                    break;
-                    
+                    break;                    
                 }
         }
         require_once("views/empleado/verreportes.php");

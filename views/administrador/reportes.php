@@ -33,7 +33,9 @@
                         <br>
                         <br>
                         <br>
-                        <span style="color: rgba(215, 15, 54); font-family: 'Raleway-regular'"> &nbsp* Usuario no encontrado *</span>
+                        <?php if(isset($_REQUEST['ErrorUser'])): ?>
+                            <span style="color: rgba(215, 15, 54); font-family: 'Raleway-regular'"> &nbsp* Usuario no encontrado *</span>
+                        <?php endif; ?>
                     </form>
                 </div>                                
             </div>
