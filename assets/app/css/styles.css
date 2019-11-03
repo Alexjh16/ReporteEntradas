@@ -615,3 +615,39 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     border-bottom: 1px solid rgba(64, 194, 12, 0.486);
     transition: all .5s;    
 }
+
+#ReporteEmpleado .content-search{
+    position: relative;
+    margin: 5%;
+}
+
+#ReporteEmpleado .content-search h4{
+    color: white;
+    font-family: "Raleway-Regular";
+}
+
+#ReporteEmpleado .content-search form label{
+    margin-right: 15px;
+    color: white;
+    font-family: "Raleway-Regular";
+}
+
+#ReporteEmpleado .content-search form button{
+    margin-top: 5px;
+    margin-left: 25px;
+    padding: 4px;
+    width: 15%;   
+    color: rgba(80, 38, 38, 0.589);
+    background-color: transparent;
+    border: 1px solid rgba(128, 85, 85, 0.822);
+    font-family: sans-serif;
+    transition: all .5s;
+    border-radius: 3px;
+}
+
+#ReporteEmpleado .content-search form button:hover{
+
+background-color: rgba(128, 85, 85, 0.322);
+    color: rgba(59, 40, 40, 0.979);
+    transition: all .5s;    
+}

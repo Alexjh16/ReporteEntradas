@@ -16,12 +16,23 @@
             </nav>       
         </header>
         <section id="ReporteEmpleado">
+        <div class="content-search">
+            <h4>Consultar reportes por fechas</h4>
+            <form method="post" action="?class=Administrador&method=ViewReportUsuario">
+                <label for="">Fecha Inicial</label>
+                    <input type="date" name="fecha_inicial" required="true">
+                <label for="">Fecha Final</label>
+                    <input type="date" name="fecha_final" required="true">
+                <label for="">Numero Documento</label>
+                    <input type="text" name="fk_numero_documento">
+                <button type="submit">Consultar</button>
+            </form>
+        </div>
             <table>
                 <tr>
                     <th>Fecha Reporte</th>
                     <th>Hora Entrada</th>
                     <th>Hora Salida</th>
-                    <th>Total Horas</th>
                 </tr>
                 <?php foreach($ReportesUsuarios as $ReportesUsuario): ?>
                     <tr>
